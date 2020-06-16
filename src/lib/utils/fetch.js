@@ -1,5 +1,5 @@
 import data from '../data.json';
 
-export const customFetch = (url, opts) => {
+export default () => {
   return Promise.resolve(data);
 };
