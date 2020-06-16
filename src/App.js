@@ -1,14 +1,13 @@
 import React from 'react';
-
-import Logo from './components/Logo';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Container from 'react-bootstrap/Container';
+import Header from './components/Header';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <Logo />
-      </header>
-    </div>
+    <Container>
+      <Header />
+    </Container>
   );
 }
 

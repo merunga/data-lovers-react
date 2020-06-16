@@ -1,9 +1,10 @@
 import React from 'react';
+import styles from './styles.module.css';
 
 const Logo = () => (
   <img
     src="https://upload.wikimedia.org/wikipedia/en/c/c8/Rick_and_Morty_logo.png"
-    className="App-logo"
+    className={styles.img}
     alt="logo"
   />
 );
