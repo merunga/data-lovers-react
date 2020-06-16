@@ -1,5 +1,5 @@
 import React from 'react';
 
-const Filter = () => (<div>Filtro</div>);
+const Filter = () => (null);
 
 export default Filter;
