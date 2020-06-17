@@ -4,9 +4,9 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
-import Button from 'react-bootstrap/Button';
 
 import fetch from '../../lib/utils/fetch';
+import PaginationControl from './PaginationControl';
 
 const Content = ({ searchText }) => {
   const [data, setData] = useState({ info: {}, results: [] });
@@ -15,6 +15,9 @@ const Content = ({ searchText }) => {
 
   useEffect(() => {
     setLoading(true);
+    if (searchText) {
+      setCurrUrl('');
+    }
     fetch(currUrl, searchText).then((jsonResponse) => {
       setData(jsonResponse);
       setLoading(false);
@@ -25,11 +28,14 @@ const Content = ({ searchText }) => {
     return 'Loading...';
   }
 
+  const pagination = <PaginationControl prev={data.info.prev} next={data.info.next} setUrl={setCurrUrl}/>;
+
   return (
     <Container fluid>
+      {pagination}
       <Row>
         {data.results.map((character) => (
-          <Col key={character.name} xs={12} sm={6} md={4} lg={3}>
+          <Col key={character.id} xs={12} sm={6} md={4} lg={3}>
             <Card>
               <Card.Img variant="top" src={character.image} />
               <Card.Body>
@@ -39,18 +45,7 @@ const Content = ({ searchText }) => {
           </Col>
         ))}
       </Row>
-      <Row>
-        <Col className="text-center">
-          {data.info.prev && (
-            <Button onClick={() => {setCurrUrl(data.info.prev)}}>prev</Button>
-          )}
-        </Col>
-        <Col className="text-center">
-          {data.info.next && (
-            <Button onClick={() => {setCurrUrl(data.info.next)}}>next</Button>
-          )}
-        </Col>
-      </Row>
+      {pagination}
     </Container>
   );
 };
