@@ -16,7 +16,7 @@ const Filter = ({ setSearchText, setUrl }) => {
         <Form.Control
           size="lg"
           type="text"
-          placeholder="Buscar..."
+          placeholder="Busca un personaje"
           onChange={(e) => {
             setTempSearchText(e.target.value);
           }}
