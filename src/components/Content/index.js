@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import Card from 'react-bootstrap/Card';
 
 import fetch from '../../lib/utils/fetch';
+import CharacterCard from '../CharacterCard';
 import PaginationControl from './PaginationControl';
 
 const Content = ({ searchText, url, setUrl }) => {
@@ -24,23 +24,26 @@ const Content = ({ searchText, url, setUrl }) => {
     return 'Loading...';
   }
 
-  const pagination = <PaginationControl prev={data.info.prev} next={data.info.next} setUrl={setUrl}/>;
+  const pagination = (
+    <PaginationControl
+      prev={data.info.prev}
+      next={data.info.next}
+      setUrl={setUrl}
+    />
+  );
+
+  const cards = data.results.map((character) => (
+    <CharacterCard key={character.id} character={character} />
+  ));
 
   return (
     <Container fluid>
       {pagination}
       <Row>
-        {data.results.length === 0 && (<h3>No se encontraron resultados</h3>)}
-        {data.results.map((character) => (
-          <Col key={character.id} xs={12} sm={6} md={4} lg={3}>
-            <Card>
-              <Card.Img variant="top" src={character.image} />
-              <Card.Body>
-                <Card.Title>{character.name}</Card.Title>
-              </Card.Body>
-            </Card>
-          </Col>
-        ))}
+        {data.results.length === 0 && (
+          <Col><h3>No se encontraron resultados</h3></Col>
+        )}
+        {cards}
       </Row>
       {pagination}
     </Container>
@@ -50,7 +53,7 @@ const Content = ({ searchText, url, setUrl }) => {
 Content.propTypes = {
   searchText: PropTypes.string.isRequired,
   url: PropTypes.string,
-  setUrl: PropTypes.string.isRequired,
+  setUrl: PropTypes.func.isRequired,
 };
 
 Content.defaultProps = {
