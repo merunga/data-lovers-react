@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "98f9f1ce06ef4f70cde0fe7b295a3664",
+    "revision": "37839847a18e5ea51f0183a5397fdae1",
     "url": "/data-lovers-react/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/data-lovers-react/static/css/2.af3c1da9.chunk.css"
   },
   {
-    "revision": "7c8088b53e9c90003037",
+    "revision": "feef44e97786991b2d9b",
     "url": "/data-lovers-react/static/css/main.6ff8d4ee.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/data-lovers-react/static/js/2.8216fe0f.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "7c8088b53e9c90003037",
-    "url": "/data-lovers-react/static/js/main.c469b45c.chunk.js"
+    "revision": "feef44e97786991b2d9b",
+    "url": "/data-lovers-react/static/js/main.4bed4116.chunk.js"
   },
   {
     "revision": "462ac96adac607031928",
