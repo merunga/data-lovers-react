@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -7,18 +8,18 @@ import Button from 'react-bootstrap/Button';
 
 import fetch from '../../lib/utils/fetch';
 
-const Content = () => {
+const Content = ({ searchText }) => {
   const [data, setData] = useState({ info: {}, results: [] });
   const [loading, setLoading] = useState(false);
   const [currUrl, setCurrUrl] = useState('');
 
   useEffect(() => {
     setLoading(true);
-    fetch(currUrl).then((jsonResponse) => {
+    fetch(currUrl, searchText).then((jsonResponse) => {
       setData(jsonResponse);
       setLoading(false);
     })
-  }, [currUrl]);
+  }, [currUrl, searchText]);
 
   if (loading) {
     return 'Loading...';
@@ -53,5 +54,9 @@ const Content = () => {
     </Container>
   );
 };
+
+Content.propTypes = {
+  searchText: PropTypes.string.isRequired,
+}
 
 export default Content;
