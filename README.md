@@ -46,17 +46,18 @@
 10. Crear placeholder para componentes `Filter` y `Content`
 11. Copiar data estatica a `json` local
 12. Crear contenido de `Content` usando el `json` local (olvidar de setear `key` y ver mensaje de error)
-13. Crear `Filter` comprobar q no hace nada
-14. Crear los estados locales en `App.js` para manejo de `searchText`
-15. Atar `setSearchText` a `Filter`
-16. Atar`searchText` a `Content` con filtrado local (cambiar tipo de `props` y ver mensaje de error)
-17. Crear repo en github y subir codigo
-18. Instalar `gh-pages`, configurar `HOME_URL`, crear `npm scrips` de `build`,`predeploy` y `deploy`
-19. Hacer deploy, chequear creacion de branch `gh-pages` y habilitar `gh-pages` en repo
-20. Crear funcion para _custom_ `fetch` y usar data remota
-21. Crear componente de `Loading` para usabilidad
-22. Crear controles de paginacion dentro de `Content`
-23. Crear componente `PaginationControl` y usarlo dentro de `Content`
-24. Realizar busqueda remota usando los parametros de la API (_lift url state_)
-25. Manejo de error en la API
+13. Extraer card a propio componente
+14. Crear repo en github y subir codigo
+15. Instalar `gh-pages`, configurar `HOME_URL`, crear `npm scrips` de `build`,`predeploy` y `deploy`
+16. Hacer deploy, chequear creacion de branch `gh-pages` y habilitar `gh-pages` en repo
+17. Crear `Filter` comprobar q no hace nada
+18. Crear los estados locales en `App.js` para manejo de `searchText`
+19. Atar `setSearchText` a `Filter`
+20. Atar`searchText` a `Content` con filtrado local (cambiar tipo de `props` y ver mensaje de error)
+21. Crear funcion para _custom_ `fetch` y usar data remota
+22. Crear componente de `Loading` para usabilidad
+23. Crear controles de paginacion dentro de `Content`
+24. Crear componente `PaginationControl` y usarlo dentro de `Content`
+25. Realizar busqueda remota usando los parametros de la API (_lift url state_)
+26. Manejo de error en la API
   
