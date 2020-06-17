@@ -34,30 +34,29 @@
 
 ## Guión
 
-- Crear proyecto
-- Levantarlo
-- Comprobar configuracion de `eslint`
-- Cambiar logo
-- Extraer logo a componente independiente, primero clase luego función
-- Cambiar tamaño de logo usando `css modules`
-- Instalar `react-bootstrap` e importar `css` global
-- Hacer layout usando `react-bootstrap`
-- Extraer componente `Header`
-- Crear placeholder para componentes `Filter` y `Content`
-- Copiar data estatica a `json` local
-- Crear contenido de `Content` usando el `json` local
-- Crear `Filter` comprobar q no hace nada
-- Crear los estados locales en `App.js` para manejo de `searchText`
-- Atar `setSearchText` a `Filter`
-- Atar`searchText` a `Content` con filtrado local
-- Cambiar tipo de 
-- Crear funcion para _custom_ `fetch` y usar data remota
-- Crear componente de `Loading` para usabilidad
-- Crear controles de paginacion dentro de `Content`
-- Crear componente `PaginationControl` y usarlo dentro de `Content`
-- Realizar busqueda remota usando los parametros de la API (_lift url state_)
-- Manejo de error en la API
-- Crear repo en github y subir codigo
-- Instalar `gh-pages`, configurar `HOME_URL`, crear `npm scrips` de `build`,`predeploy` y `deploy`
-- Hacer deploy, chequear creacion de branch `gh-pages` y habilitar `gh-pages` en repo
+1. Crear proyecto
+2. Levantarlo
+3. Comprobar configuracion de `eslint`
+4. Cambiar logo
+5. Extraer logo a componente independiente, primero clase luego función
+6. Cambiar tamaño de logo usando `css modules`
+7. Instalar `react-bootstrap` e importar `css` global
+8. Hacer layout usando `react-bootstrap`
+9. Extraer componente `Header`
+10. Crear placeholder para componentes `Filter` y `Content`
+11. Copiar data estatica a `json` local
+12. Crear contenido de `Content` usando el `json` local (olvidar de setear `key` y ver mensaje de error)
+13. Crear `Filter` comprobar q no hace nada
+14. Crear los estados locales en `App.js` para manejo de `searchText`
+15. Atar `setSearchText` a `Filter`
+16. Atar`searchText` a `Content` con filtrado local (cambiar tipo de `props` y ver mensaje de error)
+17. Crear repo en github y subir codigo
+18. Instalar `gh-pages`, configurar `HOME_URL`, crear `npm scrips` de `build`,`predeploy` y `deploy`
+19. Hacer deploy, chequear creacion de branch `gh-pages` y habilitar `gh-pages` en repo
+20. Crear funcion para _custom_ `fetch` y usar data remota
+21. Crear componente de `Loading` para usabilidad
+22. Crear controles de paginacion dentro de `Content`
+23. Crear componente `PaginationControl` y usarlo dentro de `Content`
+24. Realizar busqueda remota usando los parametros de la API (_lift url state_)
+25. Manejo de error en la API
   
