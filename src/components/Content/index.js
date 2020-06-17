@@ -30,6 +30,7 @@ const Content = ({ searchText, url, setUrl }) => {
     <Container fluid>
       {pagination}
       <Row>
+        {data.results.length === 0 && (<h3>No se encontraron resultados</h3>)}
         {data.results.map((character) => (
           <Col key={character.id} xs={12} sm={6} md={4} lg={3}>
             <Card>
