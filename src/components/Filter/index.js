@@ -2,11 +2,12 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import Form from 'react-bootstrap/Form';
 
-const Filter = ({ setSearchText }) => {
+const Filter = ({ setSearchText, setUrl }) => {
   const [tempSearchText, setTempSearchText] = useState('');
   const onSubmit = (e) => {
     e.preventDefault()
     setSearchText(tempSearchText);
+    setUrl('');
   };
 
   return (
@@ -28,6 +29,7 @@ const Filter = ({ setSearchText }) => {
 
 Filter.propTypes = {
   setSearchText: PropTypes.func.isRequired,
+  setUrl: PropTypes.func.isRequired,
 };
 
 export default Filter;

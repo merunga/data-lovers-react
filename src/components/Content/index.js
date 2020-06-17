@@ -8,27 +8,23 @@ import Card from 'react-bootstrap/Card';
 import fetch from '../../lib/utils/fetch';
 import PaginationControl from './PaginationControl';
 
-const Content = ({ searchText }) => {
+const Content = ({ searchText, url, setUrl }) => {
   const [data, setData] = useState({ info: {}, results: [] });
   const [loading, setLoading] = useState(false);
-  const [currUrl, setCurrUrl] = useState('');
 
   useEffect(() => {
     setLoading(true);
-    if (searchText) {
-      setCurrUrl('');
-    }
-    fetch(currUrl, searchText).then((jsonResponse) => {
+    fetch(url, searchText).then((jsonResponse) => {
       setData(jsonResponse);
       setLoading(false);
     })
-  }, [currUrl, searchText]);
+  }, [url, searchText]);
 
   if (loading) {
     return 'Loading...';
   }
 
-  const pagination = <PaginationControl prev={data.info.prev} next={data.info.next} setUrl={setCurrUrl}/>;
+  const pagination = <PaginationControl prev={data.info.prev} next={data.info.next} setUrl={setUrl}/>;
 
   return (
     <Container fluid>
@@ -52,6 +48,12 @@ const Content = ({ searchText }) => {
 
 Content.propTypes = {
   searchText: PropTypes.string.isRequired,
-}
+  url: PropTypes.string,
+  setUrl: PropTypes.string.isRequired,
+};
+
+Content.defaultProps = {
+  url: '',
+};
 
 export default Content;

@@ -38,7 +38,7 @@
 - Crear componente de `Loading` para usabilidad
 - Crear controles de paginacion dentro de `Content`
 - Crear componente `PaginationControl` y usarlo dentro de `Content`
-- Realizar busqueda remota usando los parametros de la API
+- Realizar busqueda remota usando los parametros de la API (_lift url state_)
 - Crear repo en github y subir codigo
 - Instalar `gh-pages`, configurar `HOME_URL`, crear `npm scrips` de `build`,`predeploy` y `deploy`
 - Hacer deploy, chequear creacion de branch `gh-pages` y habilitar `gh-pages` en repo
