@@ -50,14 +50,21 @@
 14. Crear repo en github y subir codigo
 15. Instalar `gh-pages`, configurar `HOME_URL`, crear `npm scrips` de `build`,`predeploy` y `deploy`
 16. Hacer deploy, chequear creacion de branch `gh-pages` y habilitar `gh-pages` en repo
-17. Crear `Filter` comprobar q no hace nada
-18. Crear los estados locales en `App.js` para manejo de `searchText`
-19. Atar `setSearchText` a `Filter`
-20. Atar`searchText` a `Content` con filtrado local (cambiar tipo de `props` y ver mensaje de error)
-21. Crear funcion para _custom_ `fetch` y usar data remota
-22. Crear componente de `Loading` para usabilidad
-23. Crear controles de paginacion dentro de `Content`
-24. Crear componente `PaginationControl` y usarlo dentro de `Content`
-25. Realizar busqueda remota usando los parametros de la API (_lift url state_)
-26. Manejo de error en la API
+17. FIN SESION 1
+18. Crear `Filter` comprobar q no hace nada al retornar `null`
+19. Crear estados locales de `searchText`, asociarlo al `value` pero no al `onClick`
+20. Cambiar el valor por defecto del `useState` para ver como se refleja en el input
+21. Capturar el evento `onChange` del `input`
+22. Subir el estado a en `App.js` para manejo de `searchText` y explicar el por qué
+23. Atar `searchText` y `setSearchText` como `props` a `Filter`
+24. Atar`searchText` a `Content` con filtrado local de data a traves de una RegExp
+25. Usar `useEffect` para traer la data de la API, y un `useState` para guardar esa data
+26. Explicar porque el filtrado local ya no nos sirve y cheuquear los docs de la API para ver como filtrar
+27. Asociar el `searchText` como parametros al URL de la API
+28. Crear componente de `Loading` para usabilidad
+29. FIN SESION 2
+30. Crear controles de paginacion dentro de `Content`
+31. Crear componente `PaginationControl` y usarlo dentro de `Content`
+32. Realizar busqueda remota usando los parametros de la API (_lift url state_)
+33. Manejo de error en la API
   
